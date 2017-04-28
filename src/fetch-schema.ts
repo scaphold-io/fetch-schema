@@ -25,7 +25,7 @@ program
   .option('-f, --filename <name>', 'File to save the schema in')
   .action((url: string) => {
     if (!url) {
-      console.error('Please provide a url to your GraphQL API')
+      console.log(chalk.red('Please provide a url to your GraphQL API'))
       process.exit(1)
     }
     rp({
@@ -40,16 +40,16 @@ program
       const schema = buildClientSchema(res.data as IntrospectionQuery)
       if (program.filename) {
         const p = path.join(process.cwd(), program.filename)
-        chalk.blue(`Saving schema to ${p}`)
+        console.log(chalk.blue(`Saving schema to ${p}`))
         fs.writeFileSync(p, printSchema(schema))
       } else {
-        chalk.blue(printSchema(schema))
+        console.log(chalk.blue(printSchema(schema)))
       }
     })
   })
 
 program.parse(process.argv);
 if (program.args.length === 0) {
-  console.error('Please provide a url that points to a GraphQL API')
+  console.log(chalk.red('Please provide a url that points to a GraphQL API'))
   process.exit(1)
 }
