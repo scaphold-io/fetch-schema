@@ -19,9 +19,9 @@
     "starter",
     "npm"
   ],
-  "main": "build/index.js",
+  "main": "build/fetch-schema.js",
   "bin": {
-    "fetch-schema": "./build/index.js"
+    "fetch-schema": "./build/fetch-schema.js"
   },
   "scripts": {
     "buildw": "./scripts/buildw",
