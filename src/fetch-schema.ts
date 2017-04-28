@@ -40,10 +40,10 @@ program
       const schema = buildClientSchema(res.data as IntrospectionQuery)
       if (program.filename) {
         const p = path.join(process.cwd(), program.filename)
-        console.log(chalk.blue(`Saving schema to ${p}`))
+        console.log(chalk.cyan(`Saving schema to ${p}`))
         fs.writeFileSync(p, printSchema(schema))
       } else {
-        console.log(chalk.blue(printSchema(schema)))
+        console.log(chalk.cyan(printSchema(schema)))
       }
     })
   })
