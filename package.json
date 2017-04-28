@@ -21,7 +21,7 @@
   ],
   "main": "build/index.js",
   "bin": {
-    "fetch-schema": "./index.js"
+    "fetch-schema": "./build/index.js"
   },
   "scripts": {
     "buildw": "./scripts/buildw",
