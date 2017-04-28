@@ -6,6 +6,7 @@
 
 var program = require('commander')
 var rp = require('request-promise')
+const chalk = require('chalk')
 import {
   printSchema,
   buildClientSchema,
@@ -15,7 +16,6 @@ import {
 } from 'graphql'
 import * as fs from 'fs'
 import * as path from 'path'
-import chalk from 'chalk'
 
 program
   .version('0.0.1')
