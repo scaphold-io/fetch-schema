@@ -15,6 +15,7 @@ import {
 } from 'graphql'
 import * as fs from 'fs'
 import * as path from 'path'
+import chalk from 'chalk'
 
 program
   .version('0.0.1')
@@ -27,7 +28,6 @@ program
       console.error('Please provide a url to your GraphQL API')
       process.exit(1)
     }
-    const filename = program.filename ? program.filename : 'schema.graphql'
     rp({
       uri: url,
       method: 'POST',
@@ -38,8 +38,13 @@ program
       json: true
     }).then((res: ExecutionResult) => {
       const schema = buildClientSchema(res.data as IntrospectionQuery)
-      console.log(`Saving schema to file ${filename}`)
-      fs.writeFileSync(path.join(process.cwd(), filename), printSchema(schema))
+      if (program.filename) {
+        const p = path.join(process.cwd(), program.filename)
+        chalk.blue(`Saving schema to ${p}`)
+        fs.writeFileSync(p, printSchema(schema))
+      } else {
+        chalk.blue(printSchema(schema))
+      }
     })
   })
 
