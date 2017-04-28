@@ -1,6 +1,6 @@
 {
   "name": "fetch-schema",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Download any GraphQL server's schema in GraphQL schema language.",
   "author": "Michael Paris <michael@scaphold.io>",
   "license": "MIT",
