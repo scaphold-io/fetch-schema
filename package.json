@@ -38,6 +38,7 @@
     "@types/request-promise": "^4.1.33",
     "commander": "^2.9.0",
     "graphql": "^0.9.4",
+    "request": "^2.81.0",
     "request-promise": "^4.2.0",
     "tslib": "^1.5.0"
   },
