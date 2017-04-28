@@ -1,0 +1,71 @@
+{
+  "name": "fetch-schema",
+  "version": "0.0.2",
+  "description": "Download any GraphQL server's schema in GraphQL schema language.",
+  "author": "Michael Paris <michael@scaphold.io>",
+  "license": "MIT",
+  "homepage": "https://scaphold.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaphold-io/fetch-schema"
+  },
+  "bugs": {
+    "url": "https://github.com/scaphold-io/fetch-schema/issues"
+  },
+  "keywords": [
+    "typescript",
+    "emca",
+    "emca2016",
+    "starter",
+    "npm"
+  ],
+  "main": "build/index.js",
+  "bin": {
+    "fetch-schema": "./index.js"
+  },
+  "scripts": {
+    "buildw": "./scripts/buildw",
+    "build": "./scripts/build",
+    "dev": "./scripts/dev",
+    "lint": "./scripts/lint",
+    "ci": "./scripts/ci",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "@types/commander": "^2.9.0",
+    "@types/request-promise": "^4.1.33",
+    "commander": "^2.9.0",
+    "graphql": "^0.9.4",
+    "request-promise": "^4.2.0",
+    "tslib": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.9.0",
+    "@types/jest": "^19.2.2",
+    "@types/node": "^6.0.38",
+    "jest": "^19.0.2",
+    "nodemon": "^1.11.0",
+    "npm": "^4.4.1",
+    "ts-jest": "^19.0.2",
+    "ts-node": "^2.0.0",
+    "tslint": "^4.2.0",
+    "typescript": "^2.2.1"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "browser": false,
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$"
+  }
+}
