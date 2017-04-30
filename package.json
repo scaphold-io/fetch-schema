@@ -13,11 +13,13 @@
     "url": "https://github.com/scaphold-io/fetch-schema/issues"
   },
   "keywords": [
+    "graphql",
     "typescript",
-    "emca",
-    "emca2016",
-    "starter",
-    "npm"
+    "cli",
+    "relay",
+    "react-relay",
+    "apollo",
+    "apollo-client"
   ],
   "main": "build/fetch-schema.js",
   "bin": {
