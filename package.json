@@ -1,5 +1,5 @@
 {
-  "name": "fetch-graphql-schema",
+  "name": "fetch-schema",
   "version": "0.0.13",
   "description": "Download any GraphQL server's schema in GraphQL schema language.",
   "author": "Michael Paris <michael@scaphold.io>",
@@ -7,10 +7,10 @@
   "homepage": "https://scaphold.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scaphold-io/fetch-graphql-schema"
+    "url": "git+https://github.com/scaphold-io/fetch-schema"
   },
   "bugs": {
-    "url": "https://github.com/scaphold-io/fetch-graphql-schema/issues"
+    "url": "https://github.com/scaphold-io/fetch-schema/issues"
   },
   "keywords": [
     "graphql",
@@ -21,9 +21,9 @@
     "apollo",
     "apollo-client"
   ],
-  "main": "build/fetch-graphql-schema.js",
+  "main": "build/fetch-schema.js",
   "bin": {
-    "fetch-graphql-schema": "./build/fetch-graphql-schema.js"
+    "fetch-schema": "./build/fetch-schema.js"
   },
   "scripts": {
     "buildw": "./scripts/buildw",
